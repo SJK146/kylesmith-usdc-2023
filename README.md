@@ -1,39 +1,31 @@
-# findSearchTermInBooks
+Thought process, the json input is a list of books with a metdata block and then an unknown number of text samples after it. 
+The function needs to iterate through the books, and then iterate through the text samples and check if the searchTerm is included in the text. If the sample text is included it adds the relavant metadata from the book to the results object, as well as information about the page and line of the ext sample. 
 
-Included in this repository are files to support candidates applying for software engineering roles through the GSA's U.S. Digital Corps program. 
+JS has for each loops that iterate through each item, and included string functions that can check if a string includes a string. Both were used to process the json input and then check its contents. I combined this together and checked the correct JSON labls to pull the needed information and compare it as needed. 
 
-There are three files in this repository we would like you to focus on:
+One question I do have is if the search terms should be alone, for example the search term "the" should match "the", but should it match "there" or "blithe". Based on reading the documentation I would say that it should match all the examples, because the user could specify spaces if they want it to skip them, but this would not work for the end of a string. For " The " "The ..." and "... The" would not match and should. However based on the documentation I am just searching for the given terms as is. 
 
-1. This README.
-1. `tester.html`: An HTML file that will run your code.
-1. `book_search.js`: A JavaScript source code file that you should edit for your assessment submission.
+Test cases:
+No matches
+All matches-match in every sentence 
 
-## Testing your code
+Match is apart of a substring, not full work
+    ex "The" should match "...There"
 
-You will need to open the file `tester.html` in a browser to run the code that is contained in `book_search.js`. The output from running that code will appear in the browser's web developer console. Here is documentation for opening the web developer tools for Firefox:
+Multiple books
 
-https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html#:~:text=You%20can%20open%20the%20Browser,%2B%20J%20on%20a%20Mac
+multiple matches in a single sentence 
 
-And here are the instructions for Google Chrome:
+Empty input, searchterm and json 
+Incorrect json inputs
+    different flags 
+    Empty tags, ex ISBN
+    
+Empty searchterm -returns all text 
 
-https://developer.chrome.com/docs/devtools/open/
+Really long searchterm 
 
-Either should work; we tested under both on Mac and Linux.
 
-You will submit both the HTML and JavaScript files when you are done. You should not need to edit `tester.html`. We expect all of your work to appear in the file `book_search.js`. 
 
-## Submission
 
-Directions for submission are in the prompt. As a reminder, you should commit your code to a repository called
 
-*firstnamelastname*-usdc-2023
-
-If you were remarkable technologists of years past, you might name your repository
-
-`otisboykin-usdc-2023`
-
-or 
-
-`mariebrown-usdc-2023`
-
-You, of course, should name your repository for the remarkable technologist of civic tech's future that you are.
