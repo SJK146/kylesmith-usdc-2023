@@ -6,24 +6,25 @@ JS has for each loops that iterate through each item, and included string functi
 One question I do have is if the search terms should be alone, for example the search term "the" should match "the", but should it match "there" or "blithe". Based on reading the documentation I would say that it should match all the examples, because the user could specify spaces if they want it to skip them, but this would not work for the end of a string. For " The " "The ..." and "... The" would not match and should. However based on the documentation I am just searching for the given terms as is. 
 
 Test cases:
-No matches
-All matches-match in every sentence 
 
-Match is apart of a substring, not full work
-    ex "The" should match "...There"
-
-Multiple books
-
-multiple matches in a single sentence 
-
-Empty input, searchterm and json 
-Incorrect json inputs
-    different flags 
-    Empty tags, ex ISBN
+    No matches
+    All matches-match in every sentence 
     
-Empty searchterm -returns all text 
-
-Really long searchterm 
+    Match is apart of a substring, not full work
+        ex "The" should match "...There"
+    
+    Multiple books
+    
+    multiple matches in a single sentence 
+    
+    Empty input, searchterm and json 
+    Incorrect json inputs
+        different flags 
+        Empty tags, ex ISBN
+        
+    Empty searchterm -returns all text 
+    
+    Really long searchterm 
 
 
 
