@@ -1,3 +1,5 @@
+Hello, this is my submission for the 2024 Software Engineering Project-Based Assessment 
+
 Thought process, the json input is a list of books with a metdata block and then an unknown number of text samples after it. 
 The function needs to iterate through the books, and then iterate through the text samples and check if the searchTerm is included in the text. If the sample text is included it adds the relavant metadata from the book to the results object, as well as information about the page and line of the ext sample. 
 
